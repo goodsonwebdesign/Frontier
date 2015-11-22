@@ -3,16 +3,35 @@
     <h1>Articles</h1>
   </div>
   <div class="list-group">
-    <a ng-repeat="article in articles" ui-sref="articles.view({articleId: article._id})" class="list-group-item">
-      <small class="list-group-item-text">
+    <div ng-repeat="article in articles" ui-sref="articles.view({articleId: article._id})" class="list-group-item">
+        <div class="row article-profile-header">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                     <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+                 </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 article-profile-name">
+                        Steve Yates
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        Yesterday at 9:00am - <i class="fa fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <img src="modules/articles/client/img/fr-1.jpg" class="articles-img"/>
+      <!--<small class="list-group-item-text">
         Posted on
         <span ng-bind="article.created | date:'mediumDate'"></span>
         by
         <span ng-bind="article.user.displayName"></span>
       </small>
       <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
-      <p class="list-group-item-text" ng-bind="article.content"></p>
-    </a>
+      <p class="list-group-item-text" ng-bind="article.content"></p>-->
+    </div>
   </div>
   <div class="alert alert-warning text-center" ng-if="articles.$resolved && !articles.length">
     No articles yet, why don't you <a ui-sref="articles.create">create one</a>?
