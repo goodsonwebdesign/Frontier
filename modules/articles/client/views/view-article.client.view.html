@@ -1,22 +1,91 @@
 <section ng-controller="ArticlesController" ng-init="findOne()">
-  <div class="page-header">
-    <h1 ng-bind="article.title"></h1>
-  </div>
-  <div class="pull-right" ng-show="authentication.user._id == article.user._id">
-    <a class="btn btn-primary" ui-sref="articles.edit({articleId: article._id})">
-      <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    <a class="btn btn-primary" ng-click="remove();">
-      <i class="glyphicon glyphicon-trash"></i>
-    </a>
-  </div>
-  <small>
-    <em class="text-muted">
-      Posted on
-      <span ng-bind="article.created | date:'mediumDate'"></span>
-      by
-      <span ng-bind="article.user.displayName"></span>
-    </em>
-  </small>
-  <p class="lead" ng-bind="article.content"></p>
+    <div class="list-group-item article-container">
+        <div class="row article-profile-header">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 article-profile-name">
+                        {{article.user.displayName}}
+                        <span class="article-post-title">
+                            posted {{article.title}}
+                        </span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span>
+                            {{article.created | date:"EEEE, MMMM d, y 'at' h:mm a"}}
+                        </span> - <i class="fa fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="article-content">
+            {{article.content}}
+        </div>
+        <img src="modules/articles/client/img/fr-1.jpg" class="articles-img" />
+        <hr />
+        <div class="row comment-actions">
+            <div class="like col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <span class="comment-icons"><i class="comment-icon fa fa-thumbs-up"></i> Like!</span>
+                <span class="comment-icons"><i class="comment-icon fa fa-comments-o"></i> Comment!</span>
+                <span class="comment-icons"><i class="comment-icon fa fa-share-square-o"></i> Share!</span>
+            </div>
+
+        </div>
+        <div class="row comment-section-1">
+            <div class="comment-status col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <span class="name">{{article.user.displayName}}</span> and <span class="name">{{article.user.displayName}}</span> like this.
+            </div>
+
+        </div>
+        <div class="row comment-section-2">
+            <div class="comment-image col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+            </div>
+            <div class="comment-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <div class="comment-display-name">
+                    {{article.user.displayName}}
+                </div>
+                <div class="response">
+                    Ok, Thanks!
+                </div>
+                <div class="comment-response-actions">
+                    Like ~ Reply ~ {{article.created | date:"EEEE, MMMM d, y 'at' h:mm a"}}
+                </div>
+            </div>
+        </div>
+        <div class="row comment-inline-response">
+            <div class="col-lg-1"></div>
+            <div class="inline-response col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <div class="row comment-section-2">
+                    <div class="comment-image col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                        <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+                    </div>
+                    <div class="comment-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                        <div class="comment-display-name">
+                            {{article.user.displayName}}
+                        </div>
+                        <div class="response">
+                            You're welcome.
+                        </div>
+                        <div class="comment-response-actions">
+                            Like ~ Reply ~ {{article.created | date:"EEEE, MMMM d, y 'at' h:mm a"}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row comment-section-3">
+            <div class="comment-image col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+            </div>
+            <div class="addResponse-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                Write a comment...
+            </div>
+        </div>
+    </div>
 </section>
