@@ -10,16 +10,62 @@
     width: 100%;
     position: relative;
     margin: 5px;
-    background:white;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(211, 211, 211, 0.32);
 }
-.articles-thumbnail{
-     height: 50px;
+
+.articles-thumbnail {
+    height: 50px;
     width: 50px;
     position: relative;
     margin: 5px;
 }
-.article-profile-name{
+
+.article-profile-name {
     font-size: 1.5em;
-    color:darkgrey;
-    font-weight:bold;
+    color: grey;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.article-content {
+    font-size: 1.5em;
+    margin: 10px;
+    word-break: break-word;
+    color: grey !important;
+    padding: 5px;
+}
+
+.article-post-title {
+    font-size: .75em;
+    color: darkgrey;
+    text-transform: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.comment-actions {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: darkgrey;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.comment-icons {
+    margin-right: 30px;
+    margin-left: 5px;
+}
+
+.comment-icon {
+    color: grey;
+    font-size: .85em !important;
+}
+.article-container{
+    border-radius: 5px;
+    margin: 15px;
 }
