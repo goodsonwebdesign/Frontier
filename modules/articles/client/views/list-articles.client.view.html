@@ -30,7 +30,7 @@
             <div class="article-content">
                 {{article.content}}
             </div>
-            <img src="modules/articles/client/img/fr-1.jpg" class="articles-img" />
+            <img src="modules/articles/client/img/fr-1.jpg" class="articles-img" /> 
             <hr />
             <div class="row comment-actions">
                 <div class="like col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -40,8 +40,61 @@
                 </div>
 
             </div>
+            <div class="row comment-section-1">
+                <div class="comment-status col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="name">{{article.user.displayName}}</span> and <span class="name">{{article.user.displayName}}</span> like this.  
+                </div>
+               
+            </div>
+            <div class="row comment-section-2">
+                <div class="comment-image col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+                </div>
+                <div class="comment-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <div class="comment-display-name">
+                        {{article.user.displayName}} 
+                    </div>
+                    <div class="response">
+                        Ok, Thanks!
+                    </div>
+                    <div class="comment-response-actions">
+                        Like ~ Reply ~ {{article.created | date:"EEEE, MMMM d, y 'at' h:mm a"}}
+                    </div>
+                </div>
+            </div>
+            <div class="row comment-inline-response">
+                <div class="col-lg-1"></div>
+                <div class="inline-response col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <div class="row comment-section-2">
+                        <div class="comment-image col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+                        </div>
+                        <div class="comment-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                            <div class="comment-display-name">
+                                {{article.user.displayName}}
+                            </div>
+                            <div class="response">
+                               You're welcome.
+                            </div>
+                            <div class="comment-response-actions">
+                                Like ~ Reply ~ {{article.created | date:"EEEE, MMMM d, y 'at' h:mm a"}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row comment-section-3">
+                <div class="comment-image col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <img src="modules/articles/client/img/fr-2.jpg" class="articles-thumbnail" />
+                </div>
+                <div class="addResponse-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    Write a comment...
+                </div>
+            </div>
         </div>
+       
     </div>
+   
     <div class="alert alert-warning text-center" ng-if="articles.$resolved && !articles.length">
         No articles yet, why don't you <a ui-sref="articles.create">create one</a>?
     </div>

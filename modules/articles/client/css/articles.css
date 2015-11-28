@@ -1,8 +1,8 @@
 ﻿.articles-img {
     height: 300px;
-    width: 1000px;
+    width: 98%;
     position: relative;
-    margin: 0 0 0 0;
+    margin-left: 10px;
 }
 
 .article-profile-header {
@@ -54,6 +54,19 @@
     color: darkgrey;
     font-weight: bold;
     text-transform: none;
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+.comment-inline-response {
+    min-height: 125px;
+    width: 95%;
+    padding: 20px;
+    font-size: 1.0em;
+    border-radius: 5px;
+    background: #F1F1F1;
+    color: grey;
+    margin-left: 10px;
 }
 
 .comment-icons {
@@ -65,7 +78,73 @@
     color: grey;
     font-size: .85em !important;
 }
-.article-container{
+
+.article-container {
     border-radius: 5px;
     margin: 15px;
+}
+
+.comment-section-1 {
+    min-height: 50px;
+    width: 95%;
+    padding: 10px;
+    font-size: 1.0em;
+    border-radius: 5px;
+    background: #F1F1F1;
+    color: grey;
+    margin-left: 10px;
+}
+
+.comment-section-2 {
+    min-height: 125px;
+    width: 95%;
+    padding: 20px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    background: #F1F1F1;
+    color: grey;
+    margin-left: 10px;
+}
+
+.comment-section-3 {
+    min-height: 125px;
+    width: 95%;
+    padding: 20px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    background: #F1F1F1;
+    color: grey;
+    margin-left: 10px;
+}
+
+.name {
+    font-size: 1.5em;
+    color: grey;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.comment-display-name {
+    font-size: 1.0em;
+    color: grey;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.addResponse-content {
+    height: 40px;
+    width: 75%;
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+    color: darkgrey;
+    font-size: 1.25em;
+    margin-left: 10px;
+}
+
+.comment-status {
+    color: darkgrey;
+    font-size: 1.25em;
 }
